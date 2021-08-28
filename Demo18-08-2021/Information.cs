@@ -61,7 +61,7 @@ namespace Demo18_08_2021
 
             if (_foodId == 0)
             {
-                returnedFood = new Food(WorkingContext.FoodList.Any()?WorkingContext.FoodList.Max(p=>p.Id)+1:1,name,unit,price,description,link,categoryId);
+                returnedFood = new Food(WorkingContext.FoodList.Any() ? WorkingContext.FoodList.Max(p => p.Id) + 1 : 1, name, unit, price, description, link, categoryId);
                 WorkingContext.FoodList.Add(returnedFood);
             }
             else
@@ -75,7 +75,7 @@ namespace Demo18_08_2021
                 food.CategoryId = categoryId;
                 returnedFood = food;
             }
-            
+
 
             DialogResult = DialogResult.OK;
         }
